@@ -2,38 +2,27 @@
 
 ## Deployment Test
 
-### Author: John Cokos
+### Author: Dina Ayoub
 
-- [tests report](https://github.com/codefellows/code-401-javascript-example-lab/actions)
-- [front-end](https://code-401-js-lab-example.herokuapp.com/status)
+## Running the API using postman or equivalent
 
-### Setup
+Routes:
 
-#### `.env` requirements
+[GET /artist/](https://qjmk2zguk5.execute-api.us-west-2.amazonaws.com/development/artist/)
+[GET /artist/{id}](https://qjmk2zguk5.execute-api.us-west-2.amazonaws.com/development/artist/e5abde3d-b96c-47d7-9fad-31c253bb8cfe)
+[PUT /artist/{id}](https://qjmk2zguk5.execute-api.us-west-2.amazonaws.com/development/artist/e5abde3d-b96c-47d7-9fad-31c253bb8cfe)
+[POST /artist](https://qjmk2zguk5.execute-api.us-west-2.amazonaws.com/development/artist)
+[DELETE /artist/{id}](https://qjmk2zguk5.execute-api.us-west-2.amazonaws.com/development/artist/e5abde3d-b96c-47d7-9fad-31c253bb8cfe)
 
-- `PORT` - Port Number
+Sample POST or PUT data:
+{
+    "name": "Van Gogh",
+    "numberOfArtworks": 945,
+    "location": "Netherlands",
+    "birthYear": "1861",
+    "deathYear": "1892"
+}
 
-#### Running the app
+## Tests
 
-- `npm start`
-- Endpoint: `/status`
-  - Returns Object
-
-    ```javascript
-    {
-      "domain": "john-api-server.demo.herokuapp.com",
-      "status": "running",
-      "port": 42123
-    }
-    ```
-
-#### Tests
-
-- Unit Tests: `npm run test`
-- Lint Tests: `npm run lint`
-
-#### UML
-
-(Created with [diagrams](https://app.diagrams.net/))
-
-![UML Diagram](uml.png)
+none yet
