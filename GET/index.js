@@ -2,7 +2,9 @@
 
 const artistModel = require('./artist');
 
-exports.handler = async (event) => {
+exports.handler = get();
+
+async function  get(event) {
   const id = event.pathParameters.id;
   console.log('__id__', id);
   
@@ -31,3 +33,5 @@ exports.handler = async (event) => {
     }
   }
 };
+
+module.exports = get;
